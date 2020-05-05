@@ -16,30 +16,24 @@ build:
 	mkdir data/lookup
 	mkdir data/processed
 	mkdir data/raw
-	mkdir src
-	mkdir src/classes
 
 install:
 	python3 -m venv myvenv
 	source myvenv/bin/activate
 	pip install -r requirements.txt
 
-load:
-	curl -o src/classes/config.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/config.py
-	curl -o src/classes/reader.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/reader.py
-	curl -o src/classes/writer.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/writer.py
-	curl -o src/classes/mapper.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/mapper.py
-
 start:
 	source myvenv/bin/activate
 
 build-all: build install load start
 
-clean:
+clean-all:
 	rm -fr data
-	rm -fr src
 	rm -fr myvenv
 	conda deactivate
 
-clean-data:
+clean:
 		rm -fr data/processed
+
+run:
+	python3 main.py
