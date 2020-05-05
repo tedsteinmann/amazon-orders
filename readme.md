@@ -8,7 +8,7 @@ Log in to Amazon.com, click on ```account & lists``` in the top right, then ```D
 
 ### Prerequisites
 
-The script expects a ```categories.csv``` file for sensible budgeting categories. There should be a template here.
+The script expects a ```categories.csv``` file for sensible budgeting categories in the ```data/lookup``` folder.
 
 
 ### Installing
