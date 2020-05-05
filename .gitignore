@@ -1,4 +1,5 @@
 /myvenv
 /data/raw/*.*
 /data/processed/*.*
+/data/lookup/*.*
 __pycache__

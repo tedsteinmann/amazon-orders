@@ -28,6 +28,7 @@ load:
 	curl -o src/classes/config.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/config.py
 	curl -o src/classes/reader.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/reader.py
 	curl -o src/classes/writer.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/writer.py
+	curl -o src/classes/mapper.py https://gist.githubusercontent.com/tedsteinmann/0af9d6c9e7caaee7c7faa7359009fe3a/raw/fdbcfec1f1ff1ba2c5c9fabc06fe49cbe0935851/mapper.py
 
 start:
 	source myvenv/bin/activate
