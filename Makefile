@@ -3,13 +3,13 @@ SHELL := /bin/bash
 .PHONY: clean
 
 help:
-	@echo "clean - remove all build, test, coverage and Python artifacts"
-	@echo "clean-data - remove data artifacts"
 	@echo "build - build out folder struction for data project."
 	@echo "install - setup virtual environment and install requirements"
-	@echo "load - load base classes for data manipulation"
 	@echo "start - start virtual environment"
-
+	@echo "build-all - build out folder struction for data project."
+	@echo "clean - remove all build, test, coverage and Python artifacts"
+	@echo "clean-data - remove data all artifacts"
+	@echo "run - run program"
 
 build:
 	mkdir data
@@ -25,15 +25,14 @@ install:
 start:
 	source myvenv/bin/activate
 
-build-all: build install load start
-
-clean-all:
-	rm -fr data
-	rm -fr myvenv
-	conda deactivate
+build-all: build install start
 
 clean:
-		rm -fr data/processed
+	rm -fr data/processed
+
+clean-data:
+	rm -rI data
+	rm -fr myvenv
 
 run:
 	python3 main.py

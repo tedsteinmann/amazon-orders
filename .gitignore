@@ -1,5 +1,5 @@
 /myvenv
-/data/raw/*.*
-/data/processed/*.*
-/data/lookup/*.*
+/data/lookup/*.csv
+/data/raw/*.csv
+/data/processed/*.csv
 __pycache__
