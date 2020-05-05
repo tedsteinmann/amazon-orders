@@ -6,6 +6,8 @@ df = orders.df
 
 df['Total'] = (df['Item Total'].replace( '[\$,)]','', regex=True ).replace( '[(]','-',   regex=True ).astype(float))
 
-orders_grouped = df.groupby('Category').agg({'Total':['sum','count']}).reset_index().sort_values(by='Category',ascending=False)
+orders_grouped = df.groupby(['Category'],sort=True).sum().reset_index()
+orders_grouped = orders_grouped.sort_values(by=['Total','Quantity'], ascending=[False,False])
+
 
 print(orders_grouped)
